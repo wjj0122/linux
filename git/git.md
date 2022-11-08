@@ -77,8 +77,8 @@ Remote：远程仓库
 - `git reset --hard HEAD^` : 将暂存区和工作区都回退到某个版本，其中`HEAD`为指针，指向当前的最新版本，加了一个`^`表示当前版本的前一个版本，`^^`表示前前版本，也可以用`HEAD~1`表示前一个版本，`HEAD~100`表示前100个版本，以此类推。
 ![](版本回退.png)
 - `git reset --hard 版本号` : 回到刚才的版本，版本号为刚才的最新版本
-- 如果退出终端重进看不到回退操作前的版本号，使用`git reflog`来查看操作记录，再将版本号复制并使用`git reset --hard` 版本号
-`git status` 查看当前工作树的状态，可以看到当前的分支名，`modified`的文件或者`untracked`的文件，然后把他们add到暂存区。
+- 如果退出终端重进看不到回退操作前的版本号，使用`git reflog`来查看操作记录，再将版本号复制并使用`git reset --hard 版本号`
+- `git status` 查看当前工作树的状态，可以看到当前的分支名，`modified`的文件或者`untracked`的文件，然后把他们add到暂存区。
 - 执行`git commit -m "备注"`命令一次性把暂存区的所有修改提交到分支并创建一个版本，HEAD指针永远指向当前版本。
 - `git checkout -- filename` 撤销工作区的修改，回到和版本库一模一样的状态
 - `git reset HEAD filename`  将暂存区的修改撤销，重新放回工作区
